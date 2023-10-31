@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "legacyplayervisibility",
+  "version": "${version}",
+  "name": "PlayerVisibility",
+  "description": "Hides nearby players.",
+  "authors": [
+    "Necnion8"
+  ],
+  "contact": {
+    "sources": "https://github.com/Necnion8/Legacy-PlayerVisibility",
+    "homepage": "https://github.com/Necnion8/Legacy-PlayerVisibility"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.gmail.necnionch.mymod.legacyplayervisibility.PlayerVisibilityMod"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "minecraft": "1.8.9"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
