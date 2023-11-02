@@ -11,18 +11,18 @@
     "sources": "https://github.com/Necnion8/Legacy-PlayerVisibility",
     "homepage": "https://github.com/Necnion8/Legacy-PlayerVisibility"
   },
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
+    "client": [
       "com.gmail.necnionch.mymod.legacyplayervisibility.PlayerVisibilityMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "legacyplayervisibility.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.19",
-    "minecraft": "1.8.9"
+    "minecraft": ">=1.8 <=1.12.2"
   },
   "suggests": {
     "another-mod": "*"
