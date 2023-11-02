@@ -24,8 +24,8 @@ public class PlayerVisibilityMod implements ClientModInitializer {
 		ClientTickEvents.END_CLIENT_TICK.register(unused -> {
 			if (renderPlayerKey.wasPressed()) {
 				renderPlayer = !renderPlayer;
-				String state = renderPlayer ? "§aEnable" : "§cDisable";
-				MinecraftClient.getInstance().player.sendMessage(new LiteralText("§eToggle visibility: " + state));
+				String state = renderPlayer ? "§aON" : "§cOFF";
+				MinecraftClient.getInstance().player.sendMessage(new LiteralText("§eToggled player visibility: " + state));
 			}
 		});
 	}
