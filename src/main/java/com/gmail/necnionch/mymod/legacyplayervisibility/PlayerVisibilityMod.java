@@ -5,7 +5,7 @@ import net.legacyfabric.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.legacyfabric.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
-import net.minecraft.text.LiteralText;
+import net.minecraft.util.Formatting;
 
 public class PlayerVisibilityMod implements ClientModInitializer {
 //	private static final Logger LOGGER = Logger.get("PlayerVisibilityMod");
@@ -24,8 +24,8 @@ public class PlayerVisibilityMod implements ClientModInitializer {
 		ClientTickEvents.END_CLIENT_TICK.register(unused -> {
 			if (renderPlayerKey.wasPressed()) {
 				renderPlayer = !renderPlayer;
-				String state = renderPlayer ? "§aON" : "§cOFF";
-				MinecraftClient.getInstance().player.sendMessage(new LiteralText("§eToggled player visibility: " + state));
+				String state = renderPlayer ? Formatting.GREEN + "ON " : Formatting.RED + "OFF";
+				MinecraftClient.getInstance().inGameHud.setOverlayMessage(Formatting.GOLD + "PlayerVisibility: " + state, false);
 			}
 		});
 	}
